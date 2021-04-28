@@ -1,5 +1,15 @@
 <!doctype html>
 <html lang="en">
+/Emailjs script for emails
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+(function() {
+emailjs.init("user_150FMuXduK2ftYILsFJpC");
+emailjs.send("service_cw9zarz","template_w1073b8");
+
+})();
+</script>
+
 <head>
     <title>Quiz Éire</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -26,6 +36,14 @@
         </ul>
     </div>
 </nav>
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
