@@ -1,4 +1,7 @@
 // https://dashboard.emailjs.com/admin/integration
+function sendMail(contactForm) {
+
+}
 emailjs.init('user_150FMuXduK2ftYILsFJpC');
 window.onload = function () {
     document.getElementById('contact-form').addEventListener('submit', function (event) {
