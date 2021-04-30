@@ -36,7 +36,7 @@ function populate() {
         for(let i = 0; i < choices.length; i++) {
             let element = document.getElementById("choice" + i);
             element.innerHTML = choices[i];
-            choose("button" + i, choices[i]);
+            choose("btn" + i, choices[i]);
         }
         showProgress();
     }
@@ -56,7 +56,7 @@ function showProgress() {
 function showResults() {
     let gameOverHTML = "<h1>Result</h1>";
     let message
-    if (quiz.score === 5) {
+    if (quiz.score >= 5) {
         message = "wow - you're great well done!"
     }
     if (quiz.score < 5) {
@@ -81,8 +81,6 @@ let questions = [
     new Question("Which is the most northernly county of Ireland?", ["Antrim", "Fermanagh", "Donegal", "Derry"], "Donegal"),
     new Question("'Nadolig Llawen' is 'Happy Christmas' in ...?", ["Welsh", "Ulster Scots", "Gaelic", "Shelta"], "Welsh"),
     new Question("How many counties touch River Shannon?", ["10", "11", "12", "13"], "11"),
-
-
 ];
 // create quiz
 let quiz = new Quiz(questions);
